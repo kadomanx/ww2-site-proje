@@ -1,0 +1,262 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ecf3ff;
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #b22222;
+    text-align: center;
+    border-bottom: 2px solid #b22222;
+    padding-bottom: 10px;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid grey;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #b22222;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #c9c6c6;
+}
+
+tr:hover {
+    background-color: #d0d0d0f0;
+}
+
+.site-header{
+    background-color: #3f3c3c ;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow:  0 4px 12px rgba(47, 47, 47, 0.56);
+    padding: 0 20px;
+
+}
+
+.navibar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-ikon{
+    font-size: 1.8rem;
+}
+
+.logo-yazi{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.vurgu{
+    color: #b22222 ;
+}
+
+.navi-linkler{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navi-linkler a {
+    text-decoration: none;
+    color: #cfcfcf;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.navi-linkler a:hover{
+    color: #b22222;
+}
+
+.ana-kategori-baslik{
+    font-size: 2rem;
+    color: #b22222;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+.alt-kategori-baslik{
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 5px solid #b22222;
+}
+
+.silah-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.mini-kart{
+    background: white;
+    border: 1px solid #e0e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.5s, box-shadow 0.5s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mini-kart a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.mini-kart:hover {
+    transform: translate(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-color: #b22222;
+}
+
+.mini-kart img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    background-color: #f9f9f9;
+}
+
+.mini-kart-info{
+    padding: 10px;
+}
+
+.mini-kart h4{
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.mini-kart span{
+    font-size: 0.75rem;
+    color: #b22222;
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+
+/*
+.kart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px;
+    max-width: 100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.kart {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease, box-shadow 0.5 ease;
+    border: 1px soild #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.kart:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+
+}
+
+.kart-resim{
+    height: 120px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.kart-resim img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.kart:hover .kart-resim img {
+    transform: scale(1.1);
+}
+
+.kart-icerik {
+    padding: 20px;
+    text-align: center;
+}
+
+.kart h3{
+    margin: 0 0 5px 0;
+    color: #222;
+    font-size: 1.4rem;
+
+}
+
+.kategori {
+    color: #b22222;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.buton{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.buton:hover{
+    background-color: #b22222;
+}
+*/
